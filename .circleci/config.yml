@@ -29,11 +29,11 @@ jobs:
           name: Deploy to Railway App
           command: |
             cd bankchurn-api 
-            railway up --service=NombreDelServicio
+            railway up --service=content-vibrancy
             railway up --detach
 
 
-tags_only: &tags_only
+content-vibrancytags_only: &tags_only
   filters:
     branches:
       ignore: /.*/
@@ -48,4 +48,4 @@ workflows:
           filters:
             branches:
               only:
-                - main
+                - master
